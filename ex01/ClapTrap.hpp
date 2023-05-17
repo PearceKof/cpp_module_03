@@ -25,7 +25,7 @@ protected:
 	unsigned int attackDamage;
 public:
 	ClapTrap();
-	ClapTrap( const ClapTrap &obj );
+	ClapTrap(const ClapTrap &obj);
 	ClapTrap(std::string s);
 	ClapTrap &operator=(const ClapTrap &rhs);
 	~ClapTrap();

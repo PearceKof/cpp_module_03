@@ -14,17 +14,30 @@
 
 int main()
 {
-	unsigned int attack(2);
-	ClapTrap test("Denny");
+	unsigned int attack(4);
+	ClapTrap denny("Denny");
+	denny.setAttackDamage(attack);
 	ClapTrap target("target");
 
-	test.setAttackDamage(attack);
-	for (int i(0) ; i < 10 ; i++)
+	std::cout << "\nTest of copy constructor and copy assignement operator :\n" << std::endl;
+
+	ClapTrap copy_test(target);
+	copy_test.takeDamage(attack);
+	copy_test = denny;
+	copy_test.attack("something");
+
+	std::cout << "\nTest of member functions attack, takeDammage and beRepaired :\n" << std::endl;
+
+	for (int i(0) ; i < 3 ; i++)
 	{
-		test.attack("target");
+		std::cout << "\nNew turn\n" << std::endl;
+		denny.attack("target");
 		target.takeDamage(attack);
 		target.beRepaired(1);
-		std::cout << "\nNew turn\n" << std::endl;
 	}
+
+	denny.setHitPoints(0);
+	denny.attack("something");
+	std::cout << "\nThe end of the program and the destructors are called :\n" << std::endl;
 	return (0);
 }

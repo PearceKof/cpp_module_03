@@ -17,7 +17,7 @@ FragTrap::FragTrap(): ClapTrap()
 	this->hitPoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
-	std::cout << "FragTrap default constructor called." << std::endl;
+	std::cout << "FragTrap : Default constructor called." << std::endl;
 }
 
 FragTrap::FragTrap(std::string str): ClapTrap(str)
@@ -25,33 +25,33 @@ FragTrap::FragTrap(std::string str): ClapTrap(str)
 	this->hitPoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
-	std::cout << "FragTrap constructor called." << std::endl;
+	std::cout << "FragTrap : Constructor called." << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap destructor called." << std::endl;
+	std::cout << "FragTrap : Destructor called." << std::endl;
 }
 
 void	FragTrap::attack(const std::string &target)
 {
 	if (this->energyPoints > 0 and this->hitPoints > 0)
 	{
-		std::cout << "FragTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
+		std::cout << "FragTrap : " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
 		this->energyPoints--;
 		std::cout << this->name << " now has " << this->hitPoints << " hit point and " << this->energyPoints << " energy points remaining." << std::endl;
 	}
 	else if (this->hitPoints == 0)
 	{
-		std::cout << "FragTrap " << this->name << " is dead and can't attack." << std::endl;
+		std::cout << "FragTrap : " << this->name << " is dead and can't attack." << std::endl;
 	}
 	else if (this->energyPoints == 0)
 	{
-		std::cout << "FragTrap " << this->name << " doesn't have enough energy point to attack." << std::endl;
+		std::cout << "FragTrap : " << this->name << " doesn't have enough energy point to attack." << std::endl;
 	}
 }
 
-void FragTrap::highFivesGuys(void)
+void FragTrap::highFivesGuys()
 {
-	std::cout << "Hey :) it's " << this->name << ". Can you give me a high fives guyz ? pls" << std::endl;
+	std::cout << "FragTrap : Hey :) it's " << this->name << ". Can you give me a high fives guyz ? pls" << std::endl;
 }
