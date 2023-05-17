@@ -33,6 +33,8 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 	void setAttackDamage(unsigned int amount);
+	void setEnergyPoints(unsigned int amount);
+	void setHitPoints(unsigned int amount);
 };
 
 #endif

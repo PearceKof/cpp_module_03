@@ -14,18 +14,18 @@
 
 FragTrap::FragTrap(): ClapTrap()
 {
-	std::cout << "FragTrap default constructor called." << std::endl;
 	this->hitPoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
+	std::cout << "FragTrap default constructor called." << std::endl;
 }
 
 FragTrap::FragTrap(std::string str): ClapTrap(str)
 {
-	std::cout << "FragTrap constructor called." << std::endl;
 	this->hitPoints = 100;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
+	std::cout << "FragTrap constructor called." << std::endl;
 }
 
 FragTrap::~FragTrap()
@@ -53,5 +53,5 @@ void	FragTrap::attack(const std::string &target)
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "Hey :) High fives guys !" << std::endl;
+	std::cout << "Hey :) it's " << this->name << ". Can you give me a high fives guyz ? pls" << std::endl;
 }

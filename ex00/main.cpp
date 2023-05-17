@@ -24,6 +24,7 @@ int main()
 		test.attack("target");
 		target.takeDamage(attack);
 		target.beRepaired(1);
+		std::cout << "\nNew turn\n" << std::endl;
 	}
 	return (0);
 }

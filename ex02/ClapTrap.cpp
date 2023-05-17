@@ -102,8 +102,15 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 void ClapTrap::setAttackDamage(unsigned int amount)
 {
-	if (amount <= 0)
-		this->attackDamage = amount;
-	else
-		this->attackDamage = amount;
+	this->attackDamage = amount;
+}
+
+void ClapTrap::setEnergyPoints(unsigned int amount)
+{
+	this->energyPoints = amount;
+}
+
+void ClapTrap::setHitPoints(unsigned int amount)
+{
+	this->hitPoints = amount;
 }

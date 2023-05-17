@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= clap
+NAME	= frag
 SRCS	= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 	
 CC         = c++

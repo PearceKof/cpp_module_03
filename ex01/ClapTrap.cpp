@@ -19,7 +19,7 @@ ClapTrap::ClapTrap( void ) : name("Anonyme"), hitPoints(10), energyPoints(10), a
 
 ClapTrap::ClapTrap(std::string s) : name(s), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	std::cout << "String constructor called" << std::endl;
+	std::cout << " ct String constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &obj ) : name(obj.name), hitPoints(obj.hitPoints), energyPoints(obj.energyPoints), attackDamage(obj.attackDamage)
@@ -102,8 +102,15 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 void ClapTrap::setAttackDamage(unsigned int amount)
 {
-	if (amount <= 0)
-		this->attackDamage = amount;
-	else
-		this->attackDamage = amount;
+	this->attackDamage = amount;
+}
+
+void ClapTrap::setEnergyPoints(unsigned int amount)
+{
+	this->energyPoints = amount;
+}
+
+void ClapTrap::setHitPoints(unsigned int amount)
+{
+	this->hitPoints = amount;
 }
