@@ -12,7 +12,7 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("Anonyme"), hitPoints(10), energyPoints(10), attackDamage(10)
+ClapTrap::ClapTrap() : name("Anonyme"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << "ClapTrap : Default constructor called\n" << name << " created" << std::endl;
 }
@@ -68,6 +68,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		if (this->hitPoints <= amount)
 		{
 			this->hitPoints = 0;
+			std::cout  << this->name << " is dead :c but like for real." << std::endl;
 		}
 		else
 		{
